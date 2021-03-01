@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="9.6.2">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="no"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="no"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="no"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
+<layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
+<layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="100" name="Muster" color="7" fill="1" visible="no" active="no"/>
+<layer number="251" name="SMDround" color="12" fill="11" visible="no" active="no"/>
+</layers>
+<schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
+<libraries>
+<library name="snes_cart">
+<description>&lt;b&gt;SNES Cartridge Part Library&lt;/b&gt;&lt;p&gt;
+
+Contains board outlines and common chips used in Super Nintendo game cartridges.
+&lt;ul&gt;
+&lt;li&gt;MaskROM
+&lt;li&gt;SRAM
+&lt;li&gt;Address Decoder
+&lt;li&gt;Lockout chip
+&lt;/ul&gt;
+Also contains many chips used in reproduction cartridges.
+&lt;ul&gt;
+&lt;li&gt;Flash ROM
+&lt;li&gt;SuperCIC lockout chip clone
+&lt;/ul&gt;
+&lt;author&gt;Created by qwertymodo&lt;/author&gt;&lt;p&gt;
+
+Additional parts added by magno:
+&lt;ul&gt;
+&lt;li&gt;32Mbit UV EPROM
+&lt;li&gt;Various 74XXX decoders
+&lt;/ul&gt;
+
+&lt;p&gt;
+Email: qwertymodo@gmail.com</description>
+<packages>
+<package name="CART">
+<description>&lt;b&gt;Standard SNES cart&lt;/b&gt;&lt;p&gt;
+
+&lt;b&gt;NOTE:&lt;/b&gt; Front side of board faces the back of the SNES console</description>
+<smd name="5" x="27.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="6" x="25" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="7" x="22.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="8" x="20" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="9" x="17.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="10" x="15" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="11" x="12.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="12" x="10" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="13" x="7.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="14" x="5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="15" x="2.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="16" x="0" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="17" x="-2.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="18" x="-5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="19" x="-7.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="20" x="-10" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="21" x="-12.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="22" x="-15" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="23" x="-17.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="24" x="-20" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="25" x="-22.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="26" x="-25" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="27" x="-27.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="36" x="27.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="37" x="25" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="38" x="22.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="39" x="20" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="40" x="17.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="41" x="15" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="42" x="12.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="43" x="10" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="44" x="7.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="45" x="5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="46" x="2.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="47" x="0" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="48" x="-2.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="49" x="-5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="50" x="-7.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="51" x="-10" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="52" x="-12.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="53" x="-15" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="54" x="-17.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="55" x="-20" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="56" x="-22.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="57" x="-25" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="58" x="-27.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<wire x1="29.75" y1="6.5" x2="29.75" y2="-3.25" width="0" layer="20"/>
+<wire x1="29.75" y1="-3.25" x2="29" y2="-4" width="0" layer="20" curve="-90"/>
+<wire x1="29" y1="-4" x2="-29" y2="-4" width="0" layer="20"/>
+<wire x1="-29" y1="-4" x2="-29.75" y2="-3.25" width="0" layer="20" curve="-90"/>
+<wire x1="-29.75" y1="-3.25" x2="-29.75" y2="6.5" width="0" layer="20"/>
+<wire x1="29.75" y1="6.5" x2="50" y2="6.5" width="0" layer="20"/>
+<wire x1="-29.75" y1="6.5" x2="-50" y2="6.5" width="0" layer="20"/>
+<wire x1="-50" y1="6.5" x2="-50" y2="15.25" width="0" layer="20"/>
+<wire x1="50" y1="6.5" x2="50" y2="23.5" width="0" layer="20"/>
+<wire x1="-50" y1="15.25" x2="-49.25" y2="15.25" width="0" layer="20"/>
+<wire x1="-49.25" y1="15.25" x2="-49.25" y2="21.75" width="0" layer="20"/>
+<wire x1="-49.25" y1="21.75" x2="-46.25" y2="21.75" width="0" layer="20"/>
+<wire x1="-46.25" y1="21.75" x2="-46.25" y2="23.75" width="0" layer="20"/>
+<wire x1="-46.25" y1="23.75" x2="-50" y2="23.75" width="0" layer="20"/>
+<wire x1="-50" y1="23.75" x2="-50" y2="54" width="0" layer="20"/>
+<wire x1="50" y1="23.5" x2="49.25" y2="23.5" width="0" layer="20"/>
+<wire x1="49.25" y1="23.5" x2="49.25" y2="30" width="0" layer="20"/>
+<wire x1="49.25" y1="30" x2="46.25" y2="30" width="0" layer="20"/>
+<wire x1="46.25" y1="30" x2="46.25" y2="32" width="0" layer="20"/>
+<wire x1="46.25" y1="32" x2="50" y2="32" width="0" layer="20"/>
+<wire x1="50" y1="32" x2="50" y2="54" width="0" layer="20"/>
+<wire x1="50" y1="54" x2="-50" y2="54" width="0" layer="20"/>
+<circle x="3.25" y="29" radius="2" width="0.6096" layer="49"/>
+<text x="-21.25" y="4.375" size="1.524" layer="25" font="vector" ratio="15">55</text>
+<text x="-8.75" y="4.375" size="1.524" layer="25" font="vector" ratio="15">50</text>
+<text x="3.75" y="4.375" size="1.524" layer="25" font="vector" ratio="15">45</text>
+<text x="16.25" y="4.375" size="1.524" layer="25" font="vector" ratio="15">40</text>
+<text x="28.125" y="4.375" size="1.524" layer="26" font="vector" ratio="15" rot="MR0">5</text>
+<text x="16.25" y="4.375" size="1.524" layer="26" font="vector" ratio="15" rot="MR0">10</text>
+<text x="3.75" y="4.375" size="1.524" layer="26" font="vector" ratio="15" rot="MR0">15</text>
+<text x="-8.75" y="4.375" size="1.524" layer="26" font="vector" ratio="15" rot="MR0">20</text>
+<text x="-21.25" y="4.375" size="1.524" layer="26" font="vector" ratio="15" rot="MR0">25</text>
+<circle x="3.25" y="29" radius="2" width="0" layer="40"/>
+<circle x="3.25" y="29" radius="2" width="0" layer="39"/>
+<polygon width="0.0254" layer="29">
+<vertex x="-29.75" y="3"/>
+<vertex x="29.75" y="3"/>
+<vertex x="29.75" y="-3.25" curve="-90"/>
+<vertex x="29" y="-4"/>
+<vertex x="-29" y="-4" curve="-90"/>
+<vertex x="-29.75" y="-3.25"/>
+</polygon>
+<polygon width="0.0254" layer="30">
+<vertex x="-29.75" y="3"/>
+<vertex x="29.75" y="3"/>
+<vertex x="29.75" y="-3.25" curve="-90"/>
+<vertex x="29" y="-4"/>
+<vertex x="-29" y="-4" curve="-90"/>
+<vertex x="-29.75" y="-3.25"/>
+</polygon>
+</package>
+<package name="CART-NORAM">
+<description>&lt;b&gt;Standard SNES cart&lt;/b&gt; (no SRAM)&lt;p&gt;
+
+&lt;b&gt;NOTE:&lt;/b&gt; Front side of board faces the back of the SNES console</description>
+<smd name="5" x="27.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="6" x="25" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="7" x="22.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="8" x="20" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="9" x="17.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="10" x="15" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="11" x="12.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="12" x="10" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="13" x="7.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="14" x="5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="15" x="2.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="16" x="0" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="17" x="-2.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="18" x="-5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="19" x="-7.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="20" x="-10" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="21" x="-12.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="22" x="-15" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="23" x="-17.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="24" x="-20" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="25" x="-22.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="26" x="-25" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="27" x="-27.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="36" x="27.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="37" x="25" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="38" x="22.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="39" x="20" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="40" x="17.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="41" x="15" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="42" x="12.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="43" x="10" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="44" x="7.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="45" x="5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="46" x="2.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="47" x="0" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="48" x="-2.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="49" x="-5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="50" x="-7.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="51" x="-10" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="52" x="-12.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="53" x="-15" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="54" x="-17.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="55" x="-20" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="56" x="-22.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="57" x="-25" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="58" x="-27.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<wire x1="29.75" y1="6.5" x2="29.75" y2="-3.25" width="0" layer="20"/>
+<wire x1="29.75" y1="-3.25" x2="29" y2="-4" width="0" layer="20" curve="-90"/>
+<wire x1="29" y1="-4" x2="-29" y2="-4" width="0" layer="20"/>
+<wire x1="-29" y1="-4" x2="-29.75" y2="-3.25" width="0" layer="20" curve="-90"/>
+<wire x1="-29.75" y1="-3.25" x2="-29.75" y2="6.5" width="0" layer="20"/>
+<wire x1="29.75" y1="6.5" x2="50" y2="6.5" width="0" layer="20"/>
+<wire x1="-29.75" y1="6.5" x2="-50" y2="6.5" width="0" layer="20"/>
+<text x="-21.25" y="4.375" size="1.524" layer="25" font="vector" ratio="15">55</text>
+<text x="-8.75" y="4.375" size="1.524" layer="25" font="vector" ratio="15">50</text>
+<text x="3.75" y="4.375" size="1.524" layer="25" font="vector" ratio="15">45</text>
+<text x="16.25" y="4.375" size="1.524" layer="25" font="vector" ratio="15">40</text>
+<text x="28.125" y="4.375" size="1.524" layer="26" font="vector" ratio="15" rot="MR0">5</text>
+<text x="16.25" y="4.375" size="1.524" layer="26" font="vector" ratio="15" rot="MR0">10</text>
+<text x="3.75" y="4.375" size="1.524" layer="26" font="vector" ratio="15" rot="MR0">15</text>
+<text x="-8.75" y="4.375" size="1.524" layer="26" font="vector" ratio="15" rot="MR0">20</text>
+<text x="-21.25" y="4.375" size="1.524" layer="26" font="vector" ratio="15" rot="MR0">25</text>
+<wire x1="-50" y1="6.5" x2="-50" y2="15.25" width="0" layer="20"/>
+<wire x1="50" y1="6.5" x2="50" y2="23.5" width="0" layer="20"/>
+<wire x1="-50" y1="15.25" x2="-49.25" y2="15.25" width="0" layer="20"/>
+<wire x1="-49.25" y1="15.25" x2="-49.25" y2="21.75" width="0" layer="20"/>
+<wire x1="-49.25" y1="21.75" x2="-46.25" y2="21.75" width="0" layer="20"/>
+<wire x1="-46.25" y1="21.75" x2="-46.25" y2="23.75" width="0" layer="20"/>
+<wire x1="-46.25" y1="23.75" x2="-50" y2="23.75" width="0" layer="20"/>
+<wire x1="-50" y1="23.75" x2="-50" y2="33" width="0" layer="20"/>
+<wire x1="50" y1="23.5" x2="49.25" y2="23.5" width="0" layer="20"/>
+<wire x1="49.25" y1="23.5" x2="49.25" y2="30" width="0" layer="20"/>
+<wire x1="49.25" y1="30" x2="46.25" y2="30" width="0" layer="20"/>
+<wire x1="46.25" y1="30" x2="46.25" y2="33" width="0" layer="20"/>
+<wire x1="46.25" y1="33" x2="-50" y2="33" width="0" layer="20"/>
+<circle x="3.25" y="29" radius="2" width="0.6096" layer="49"/>
+<circle x="3.25" y="29" radius="2" width="0" layer="40"/>
+<circle x="3.25" y="29" radius="2" width="0" layer="39"/>
+<polygon width="0.0254" layer="29">
+<vertex x="-29.75" y="3"/>
+<vertex x="29.75" y="3"/>
+<vertex x="29.75" y="-3.25" curve="-90"/>
+<vertex x="29" y="-4"/>
+<vertex x="-29" y="-4" curve="-90"/>
+<vertex x="-29.75" y="-3.25"/>
+</polygon>
+<polygon width="0.0254" layer="30">
+<vertex x="-29.75" y="3"/>
+<vertex x="29.75" y="3"/>
+<vertex x="29.75" y="-3.25" curve="-90"/>
+<vertex x="29" y="-4"/>
+<vertex x="-29" y="-4" curve="-90"/>
+<vertex x="-29.75" y="-3.25"/>
+</polygon>
+</package>
+<package name="CART-EDGE">
+<smd name="5" x="27.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="6" x="25" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="7" x="22.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="8" x="20" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="9" x="17.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="10" x="15" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="11" x="12.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="12" x="10" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="13" x="7.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="14" x="5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="15" x="2.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="16" x="0" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="17" x="-2.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="18" x="-5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="19" x="-7.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="20" x="-10" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="21" x="-12.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="22" x="-15" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="23" x="-17.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="24" x="-20" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="25" x="-22.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="26" x="-25" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="27" x="-27.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="36" x="27.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="37" x="25" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="38" x="22.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="39" x="20" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="40" x="17.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="41" x="15" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="42" x="12.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="43" x="10" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="44" x="7.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="45" x="5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="46" x="2.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="47" x="0" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="48" x="-2.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="49" x="-5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="50" x="-7.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="51" x="-10" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="52" x="-12.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="53" x="-15" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="54" x="-17.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="55" x="-20" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="56" x="-22.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="57" x="-25" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="58" x="-27.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<wire x1="29.75" y1="6.5" x2="29.75" y2="-3.25" width="0" layer="20"/>
+<wire x1="29.75" y1="-3.25" x2="29" y2="-4" width="0" layer="20" curve="-90"/>
+<wire x1="29" y1="-4" x2="-29" y2="-4" width="0" layer="20"/>
+<wire x1="-29" y1="-4" x2="-29.75" y2="-3.25" width="0" layer="20" curve="-90"/>
+<wire x1="-29.75" y1="-3.25" x2="-29.75" y2="6.5" width="0" layer="20"/>
+<wire x1="29.75" y1="6.5" x2="50" y2="6.5" width="0" layer="20"/>
+<wire x1="-29.75" y1="6.5" x2="-50" y2="6.5" width="0" layer="20"/>
+<text x="-21.25" y="4.375" size="1.524" layer="25" font="vector" ratio="15">55</text>
+<text x="-8.75" y="4.375" size="1.524" layer="25" font="vector" ratio="15">50</text>
+<text x="3.75" y="4.375" size="1.524" layer="25" font="vector" ratio="15">45</text>
+<text x="16.25" y="4.375" size="1.524" layer="25" font="vector" ratio="15">40</text>
+<text x="28.125" y="4.375" size="1.524" layer="26" font="vector" ratio="15" rot="MR0">5</text>
+<text x="16.25" y="4.375" size="1.524" layer="26" font="vector" ratio="15" rot="MR0">10</text>
+<text x="3.75" y="4.375" size="1.524" layer="26" font="vector" ratio="15" rot="MR0">15</text>
+<text x="-8.75" y="4.375" size="1.524" layer="26" font="vector" ratio="15" rot="MR0">20</text>
+<text x="-21.25" y="4.375" size="1.524" layer="26" font="vector" ratio="15" rot="MR0">25</text>
+<polygon width="0.0254" layer="29">
+<vertex x="-29.75" y="3"/>
+<vertex x="29.75" y="3"/>
+<vertex x="29.75" y="-3.25" curve="-90"/>
+<vertex x="29" y="-4"/>
+<vertex x="-29" y="-4" curve="-90"/>
+<vertex x="-29.75" y="-3.25"/>
+</polygon>
+<polygon width="0.0254" layer="30">
+<vertex x="-29.75" y="3"/>
+<vertex x="29.75" y="3"/>
+<vertex x="29.75" y="-3.25" curve="-90"/>
+<vertex x="29" y="-4"/>
+<vertex x="-29" y="-4" curve="-90"/>
+<vertex x="-29.75" y="-3.25"/>
+</polygon>
+</package>
+<package name="CART-50MM">
+<description>&lt;b&gt;SNES cart, 50mmx100mm&lt;/b&gt;&lt;p&gt;
+(Standard cart shape, cut to SeeedStudio 5cmx10cm size)&lt;p&gt;
+
+&lt;b&gt;NOTE:&lt;/b&gt; Front side of board faces the back of the SNES console</description>
+<smd name="5" x="27.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="6" x="25" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="7" x="22.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="8" x="20" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="9" x="17.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="10" x="15" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="11" x="12.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="12" x="10" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="13" x="7.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="14" x="5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="15" x="2.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="16" x="0" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="17" x="-2.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="18" x="-5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="19" x="-7.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="20" x="-10" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="21" x="-12.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="22" x="-15" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="23" x="-17.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="24" x="-20" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="25" x="-22.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="26" x="-25" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="27" x="-27.5" y="0" dx="1.75" dy="7.15" layer="16" stop="no" thermals="no" cream="no"/>
+<smd name="36" x="27.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="37" x="25" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="38" x="22.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="39" x="20" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="40" x="17.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="41" x="15" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="42" x="12.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="43" x="10" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="44" x="7.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="45" x="5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="46" x="2.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="47" x="0" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="48" x="-2.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="49" x="-5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="50" x="-7.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="51" x="-10" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="52" x="-12.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="53" x="-15" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="54" x="-17.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="55" x="-20" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="56" x="-22.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="57" x="-25" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="58" x="-27.5" y="0" dx="1.75" dy="7.15" layer="1" stop="no" thermals="no" cream="no"/>
+<wire x1="29.75" y1="6.5" x2="29.75" y2="-3.25" width="0" layer="20"/>
+<wire x1="29.75" y1="-3.25" x2="29" y2="-4" width="0" layer="20" curve="-90"/>
+<wire x1="29" y1="-4" x2="-29" y2="-4" width="0" layer="20"/>
+<wire x1="-29" y1="-4" x2="-29.75" y2="-3.25" width="0" layer="20" curve="-90"/>
+<wire x1="-29.75" y1="-3.25" x2="-29.75" y2="6.5" width="0" layer="20"/>
+<wire x1="29.75" y1="6.5" x2="50" y2="6.5" width="0" layer="20"/>
+<wire x1="-29.75" y1="6.5" x2="-50" y2="6.5" width="0" layer="20"/>
+<wire x1="-50" y1="6.5" x2="-50" y2="15.25" width="0" layer="20"/>
+<wire x1="50" y1="6.5" x2="50" y2="23.5" width="0" layer="20"/>
+<wire x1="-50" y1="15.25" x2="-49.25" y2="15.25" width="0" layer="20"/>
+<wire x1="-49.25" y1="15.25" x2="-49.25" y2="21.75" width="0" layer="20"/>
+<wire x1="-49.25" y1="21.75" x2="-46.25" y2="21.75" width="0" layer="20"/>
+<wire x1="-46.25" y1="21.75" x2="-46.25" y2="23.75" width="0" layer="20"/>
+<wire x1="-46.25" y1="23.75" x2="-50" y2="23.75" width="0" layer="20"/>
+<wire x1="-50" y1="23.75" x2="-50" y2="46" width="0" layer="20"/>
+<wire x1="50" y1="23.5" x2="49.25" y2="23.5" width="0" layer="20"/>
+<wire x1="49.25" y1="23.5" x2="49.25" y2="30" width="0" layer="20"/>
+<wire x1="49.25" y1="30" x2="46.25" y2="30" width="0" layer="20"/>
+<wire x1="46.25" y1="30" x2="46.25" y2="32" width="0" layer="20"/>
+<wire x1="46.25" y1="32" x2="50" y2="32" width="0" layer="20"/>
+<wire x1="50" y1="32" x2="50" y2="46" width="0" layer="20"/>
+<wire x1="50" y1="46" x2="-50" y2="46" width="0" layer="20"/>
+<circle x="3.25" y="29" radius="2" width="0.6096" layer="49"/>
+<text x="-21.25" y="4.375" size="1.524" layer="25" font="vector" ratio="15">55</text>
+<text x="-8.75" y="4.375" size="1.524" layer="25" font="vector" ratio="15">50</text>
+<text x="3.75" y="4.375" size="1.524" layer="25" font="vector" ratio="15">45</text>
+<text x="16.25" y="4.375" size="1.524" layer="25" font="vector" ratio="15">40</text>
+<text x="28.125" y="4.375" size="1.524" layer="26" font="vector" ratio="15" rot="MR0">5</text>
+<text x="16.25" y="4.375" size="1.524" layer="26" font="vector" ratio="15" rot="MR0">10</text>
+<text x="3.75" y="4.375" size="1.524" layer="26" font="vector" ratio="15" rot="MR0">15</text>
+<text x="-8.75" y="4.375" size="1.524" layer="26" font="vector" ratio="15" rot="MR0">20</text>
+<text x="-21.25" y="4.375" size="1.524" layer="26" font="vector" ratio="15" rot="MR0">25</text>
+<circle x="3.25" y="29" radius="2" width="0" layer="40"/>
+<circle x="3.25" y="29" radius="2" width="0" layer="39"/>
+<polygon width="0.0254" layer="29">
+<vertex x="-29.75" y="3"/>
+<vertex x="29.75" y="3"/>
+<vertex x="29.75" y="-3.25" curve="-90"/>
+<vertex x="29" y="-4"/>
+<vertex x="-29" y="-4" curve="-90"/>
+<vertex x="-29.75" y="-3.25"/>
+</polygon>
+<polygon width="0.0254" layer="30">
+<vertex x="-29.75" y="3"/>
+<vertex x="29.75" y="3"/>
+<vertex x="29.75" y="-3.25" curve="-90"/>
+<vertex x="29" y="-4"/>
+<vertex x="-29" y="-4" curve="-90"/>
+<vertex x="-29.75" y="-3.25"/>
+</polygon>
+</package>
+</packages>
+<symbols>
+<symbol name="CART">
+<description>Standard 46-contact SNES cartridge edge connector</description>
+<pin name="GND" x="-17.78" y="27.94" length="middle" direction="pwr"/>
+<pin name="A11" x="-17.78" y="25.4" length="middle" direction="in"/>
+<pin name="A10" x="-17.78" y="22.86" length="middle" direction="in"/>
+<pin name="A9" x="-17.78" y="20.32" length="middle" direction="in"/>
+<pin name="A8" x="-17.78" y="17.78" length="middle" direction="in"/>
+<pin name="A7" x="-17.78" y="15.24" length="middle" direction="in"/>
+<pin name="A6" x="-17.78" y="12.7" length="middle" direction="in"/>
+<pin name="A5" x="-17.78" y="10.16" length="middle" direction="in"/>
+<pin name="A4" x="-17.78" y="7.62" length="middle" direction="in"/>
+<pin name="A3" x="-17.78" y="5.08" length="middle" direction="in"/>
+<pin name="A2" x="-17.78" y="2.54" length="middle" direction="in"/>
+<pin name="A1" x="-17.78" y="0" length="middle" direction="in"/>
+<pin name="A0" x="-17.78" y="-2.54" length="middle" direction="in"/>
+<pin name="!IRQ" x="-17.78" y="-5.08" length="middle" direction="out"/>
+<pin name="D0" x="-17.78" y="-7.62" length="middle"/>
+<pin name="D1" x="-17.78" y="-10.16" length="middle"/>
+<pin name="D2" x="-17.78" y="-12.7" length="middle"/>
+<pin name="D3" x="-17.78" y="-15.24" length="middle"/>
+<pin name="!RD" x="-17.78" y="-17.78" length="middle" direction="in"/>
+<pin name="CICOUT1" x="-17.78" y="-20.32" length="middle" direction="out"/>
+<pin name="CICIN" x="-17.78" y="-22.86" length="middle" direction="in"/>
+<pin name="!RESET" x="-17.78" y="-25.4" length="middle" direction="in"/>
+<pin name="VCC" x="-17.78" y="-27.94" length="middle" direction="pwr"/>
+<pin name="VCC@1" x="17.78" y="-27.94" length="middle" direction="pwr" rot="R180"/>
+<pin name="CPUCLK" x="17.78" y="-25.4" length="middle" direction="in" rot="R180"/>
+<pin name="CICCLK" x="17.78" y="-22.86" length="middle" direction="in" rot="R180"/>
+<pin name="CICOUT2" x="17.78" y="-20.32" length="middle" direction="out" rot="R180"/>
+<pin name="!WR" x="17.78" y="-17.78" length="middle" direction="in" rot="R180"/>
+<pin name="D7" x="17.78" y="-15.24" length="middle" rot="R180"/>
+<pin name="D6" x="17.78" y="-12.7" length="middle" rot="R180"/>
+<pin name="D5" x="17.78" y="-10.16" length="middle" rot="R180"/>
+<pin name="D4" x="17.78" y="-7.62" length="middle" rot="R180"/>
+<pin name="!CART" x="17.78" y="-5.08" length="middle" direction="in" rot="R180"/>
+<pin name="BA7" x="17.78" y="-2.54" length="middle" direction="in" rot="R180"/>
+<pin name="BA6" x="17.78" y="0" length="middle" direction="in" rot="R180"/>
+<pin name="BA5" x="17.78" y="2.54" length="middle" direction="in" rot="R180"/>
+<pin name="BA4" x="17.78" y="5.08" length="middle" direction="in" rot="R180"/>
+<pin name="BA3" x="17.78" y="7.62" length="middle" direction="in" rot="R180"/>
+<pin name="BA2" x="17.78" y="10.16" length="middle" direction="in" rot="R180"/>
+<pin name="BA1" x="17.78" y="12.7" length="middle" direction="in" rot="R180"/>
+<pin name="BA0" x="17.78" y="15.24" length="middle" direction="in" rot="R180"/>
+<pin name="A15" x="17.78" y="17.78" length="middle" direction="in" rot="R180"/>
+<pin name="A14" x="17.78" y="20.32" length="middle" direction="in" rot="R180"/>
+<pin name="A13" x="17.78" y="22.86" length="middle" direction="in" rot="R180"/>
+<pin name="A12" x="17.78" y="25.4" length="middle" direction="in" rot="R180"/>
+<pin name="GND@1" x="17.78" y="27.94" length="middle" direction="pwr" rot="R180"/>
+<wire x1="-12.7" y1="30.48" x2="12.7" y2="30.48" width="0.254" layer="94"/>
+<wire x1="12.7" y1="30.48" x2="12.7" y2="-30.48" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-30.48" x2="0" y2="-30.48" width="0.254" layer="94"/>
+<wire x1="0" y1="-30.48" x2="-12.7" y2="-30.48" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-30.48" x2="-12.7" y2="30.48" width="0.254" layer="94"/>
+<wire x1="0" y1="30.48" x2="0" y2="-30.48" width="0.254" layer="94"/>
+<text x="-12.7" y="-33.02" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="CART">
+<description>Standard 46-contact SNES cartridge edge connector</description>
+<gates>
+<gate name="G$1" symbol="CART" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="CART">
+<connects>
+<connect gate="G$1" pin="!CART" pad="49"/>
+<connect gate="G$1" pin="!IRQ" pad="18"/>
+<connect gate="G$1" pin="!RD" pad="23"/>
+<connect gate="G$1" pin="!RESET" pad="26"/>
+<connect gate="G$1" pin="!WR" pad="54"/>
+<connect gate="G$1" pin="A0" pad="17"/>
+<connect gate="G$1" pin="A1" pad="16"/>
+<connect gate="G$1" pin="A10" pad="7"/>
+<connect gate="G$1" pin="A11" pad="6"/>
+<connect gate="G$1" pin="A12" pad="37"/>
+<connect gate="G$1" pin="A13" pad="38"/>
+<connect gate="G$1" pin="A14" pad="39"/>
+<connect gate="G$1" pin="A15" pad="40"/>
+<connect gate="G$1" pin="A2" pad="15"/>
+<connect gate="G$1" pin="A3" pad="14"/>
+<connect gate="G$1" pin="A4" pad="13"/>
+<connect gate="G$1" pin="A5" pad="12"/>
+<connect gate="G$1" pin="A6" pad="11"/>
+<connect gate="G$1" pin="A7" pad="10"/>
+<connect gate="G$1" pin="A8" pad="9"/>
+<connect gate="G$1" pin="A9" pad="8"/>
+<connect gate="G$1" pin="BA0" pad="41"/>
+<connect gate="G$1" pin="BA1" pad="42"/>
+<connect gate="G$1" pin="BA2" pad="43"/>
+<connect gate="G$1" pin="BA3" pad="44"/>
+<connect gate="G$1" pin="BA4" pad="45"/>
+<connect gate="G$1" pin="BA5" pad="46"/>
+<connect gate="G$1" pin="BA6" pad="47"/>
+<connect gate="G$1" pin="BA7" pad="48"/>
+<connect gate="G$1" pin="CICCLK" pad="56"/>
+<connect gate="G$1" pin="CICIN" pad="25"/>
+<connect gate="G$1" pin="CICOUT1" pad="24"/>
+<connect gate="G$1" pin="CICOUT2" pad="55"/>
+<connect gate="G$1" pin="CPUCLK" pad="57"/>
+<connect gate="G$1" pin="D0" pad="19"/>
+<connect gate="G$1" pin="D1" pad="20"/>
+<connect gate="G$1" pin="D2" pad="21"/>
+<connect gate="G$1" pin="D3" pad="22"/>
+<connect gate="G$1" pin="D4" pad="50"/>
+<connect gate="G$1" pin="D5" pad="51"/>
+<connect gate="G$1" pin="D6" pad="52"/>
+<connect gate="G$1" pin="D7" pad="53"/>
+<connect gate="G$1" pin="GND" pad="5"/>
+<connect gate="G$1" pin="GND@1" pad="36"/>
+<connect gate="G$1" pin="VCC" pad="27"/>
+<connect gate="G$1" pin="VCC@1" pad="58"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="-NORAM" package="CART-NORAM">
+<connects>
+<connect gate="G$1" pin="!CART" pad="49"/>
+<connect gate="G$1" pin="!IRQ" pad="18"/>
+<connect gate="G$1" pin="!RD" pad="23"/>
+<connect gate="G$1" pin="!RESET" pad="26"/>
+<connect gate="G$1" pin="!WR" pad="54"/>
+<connect gate="G$1" pin="A0" pad="17"/>
+<connect gate="G$1" pin="A1" pad="16"/>
+<connect gate="G$1" pin="A10" pad="7"/>
+<connect gate="G$1" pin="A11" pad="6"/>
+<connect gate="G$1" pin="A12" pad="37"/>
+<connect gate="G$1" pin="A13" pad="38"/>
+<connect gate="G$1" pin="A14" pad="39"/>
+<connect gate="G$1" pin="A15" pad="40"/>
+<connect gate="G$1" pin="A2" pad="15"/>
+<connect gate="G$1" pin="A3" pad="14"/>
+<connect gate="G$1" pin="A4" pad="13"/>
+<connect gate="G$1" pin="A5" pad="12"/>
+<connect gate="G$1" pin="A6" pad="11"/>
+<connect gate="G$1" pin="A7" pad="10"/>
+<connect gate="G$1" pin="A8" pad="9"/>
+<connect gate="G$1" pin="A9" pad="8"/>
+<connect gate="G$1" pin="BA0" pad="41"/>
+<connect gate="G$1" pin="BA1" pad="42"/>
+<connect gate="G$1" pin="BA2" pad="43"/>
+<connect gate="G$1" pin="BA3" pad="44"/>
+<connect gate="G$1" pin="BA4" pad="45"/>
+<connect gate="G$1" pin="BA5" pad="46"/>
+<connect gate="G$1" pin="BA6" pad="47"/>
+<connect gate="G$1" pin="BA7" pad="48"/>
+<connect gate="G$1" pin="CICCLK" pad="56"/>
+<connect gate="G$1" pin="CICIN" pad="25"/>
+<connect gate="G$1" pin="CICOUT1" pad="24"/>
+<connect gate="G$1" pin="CICOUT2" pad="55"/>
+<connect gate="G$1" pin="CPUCLK" pad="57"/>
+<connect gate="G$1" pin="D0" pad="19"/>
+<connect gate="G$1" pin="D1" pad="20"/>
+<connect gate="G$1" pin="D2" pad="21"/>
+<connect gate="G$1" pin="D3" pad="22"/>
+<connect gate="G$1" pin="D4" pad="50"/>
+<connect gate="G$1" pin="D5" pad="51"/>
+<connect gate="G$1" pin="D6" pad="52"/>
+<connect gate="G$1" pin="D7" pad="53"/>
+<connect gate="G$1" pin="GND" pad="5"/>
+<connect gate="G$1" pin="GND@1" pad="36"/>
+<connect gate="G$1" pin="VCC" pad="27"/>
+<connect gate="G$1" pin="VCC@1" pad="58"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="-EDGE" package="CART-EDGE">
+<connects>
+<connect gate="G$1" pin="!CART" pad="49"/>
+<connect gate="G$1" pin="!IRQ" pad="18"/>
+<connect gate="G$1" pin="!RD" pad="23"/>
+<connect gate="G$1" pin="!RESET" pad="26"/>
+<connect gate="G$1" pin="!WR" pad="54"/>
+<connect gate="G$1" pin="A0" pad="17"/>
+<connect gate="G$1" pin="A1" pad="16"/>
+<connect gate="G$1" pin="A10" pad="7"/>
+<connect gate="G$1" pin="A11" pad="6"/>
+<connect gate="G$1" pin="A12" pad="37"/>
+<connect gate="G$1" pin="A13" pad="38"/>
+<connect gate="G$1" pin="A14" pad="39"/>
+<connect gate="G$1" pin="A15" pad="40"/>
+<connect gate="G$1" pin="A2" pad="15"/>
+<connect gate="G$1" pin="A3" pad="14"/>
+<connect gate="G$1" pin="A4" pad="13"/>
+<connect gate="G$1" pin="A5" pad="12"/>
+<connect gate="G$1" pin="A6" pad="11"/>
+<connect gate="G$1" pin="A7" pad="10"/>
+<connect gate="G$1" pin="A8" pad="9"/>
+<connect gate="G$1" pin="A9" pad="8"/>
+<connect gate="G$1" pin="BA0" pad="41"/>
+<connect gate="G$1" pin="BA1" pad="42"/>
+<connect gate="G$1" pin="BA2" pad="43"/>
+<connect gate="G$1" pin="BA3" pad="44"/>
+<connect gate="G$1" pin="BA4" pad="45"/>
+<connect gate="G$1" pin="BA5" pad="46"/>
+<connect gate="G$1" pin="BA6" pad="47"/>
+<connect gate="G$1" pin="BA7" pad="48"/>
+<connect gate="G$1" pin="CICCLK" pad="56"/>
+<connect gate="G$1" pin="CICIN" pad="25"/>
+<connect gate="G$1" pin="CICOUT1" pad="24"/>
+<connect gate="G$1" pin="CICOUT2" pad="55"/>
+<connect gate="G$1" pin="CPUCLK" pad="57"/>
+<connect gate="G$1" pin="D0" pad="19"/>
+<connect gate="G$1" pin="D1" pad="20"/>
+<connect gate="G$1" pin="D2" pad="21"/>
+<connect gate="G$1" pin="D3" pad="22"/>
+<connect gate="G$1" pin="D4" pad="50"/>
+<connect gate="G$1" pin="D5" pad="51"/>
+<connect gate="G$1" pin="D6" pad="52"/>
+<connect gate="G$1" pin="D7" pad="53"/>
+<connect gate="G$1" pin="GND" pad="5"/>
+<connect gate="G$1" pin="GND@1" pad="36"/>
+<connect gate="G$1" pin="VCC" pad="27"/>
+<connect gate="G$1" pin="VCC@1" pad="58"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="-SEEED" package="CART-50MM">
+<connects>
+<connect gate="G$1" pin="!CART" pad="49"/>
+<connect gate="G$1" pin="!IRQ" pad="18"/>
+<connect gate="G$1" pin="!RD" pad="23"/>
+<connect gate="G$1" pin="!RESET" pad="26"/>
+<connect gate="G$1" pin="!WR" pad="54"/>
+<connect gate="G$1" pin="A0" pad="17"/>
+<connect gate="G$1" pin="A1" pad="16"/>
+<connect gate="G$1" pin="A10" pad="7"/>
+<connect gate="G$1" pin="A11" pad="6"/>
+<connect gate="G$1" pin="A12" pad="37"/>
+<connect gate="G$1" pin="A13" pad="38"/>
+<connect gate="G$1" pin="A14" pad="39"/>
+<connect gate="G$1" pin="A15" pad="40"/>
+<connect gate="G$1" pin="A2" pad="15"/>
+<connect gate="G$1" pin="A3" pad="14"/>
+<connect gate="G$1" pin="A4" pad="13"/>
+<connect gate="G$1" pin="A5" pad="12"/>
+<connect gate="G$1" pin="A6" pad="11"/>
+<connect gate="G$1" pin="A7" pad="10"/>
+<connect gate="G$1" pin="A8" pad="9"/>
+<connect gate="G$1" pin="A9" pad="8"/>
+<connect gate="G$1" pin="BA0" pad="41"/>
+<connect gate="G$1" pin="BA1" pad="42"/>
+<connect gate="G$1" pin="BA2" pad="43"/>
+<connect gate="G$1" pin="BA3" pad="44"/>
+<connect gate="G$1" pin="BA4" pad="45"/>
+<connect gate="G$1" pin="BA5" pad="46"/>
+<connect gate="G$1" pin="BA6" pad="47"/>
+<connect gate="G$1" pin="BA7" pad="48"/>
+<connect gate="G$1" pin="CICCLK" pad="56"/>
+<connect gate="G$1" pin="CICIN" pad="25"/>
+<connect gate="G$1" pin="CICOUT1" pad="24"/>
+<connect gate="G$1" pin="CICOUT2" pad="55"/>
+<connect gate="G$1" pin="CPUCLK" pad="57"/>
+<connect gate="G$1" pin="D0" pad="19"/>
+<connect gate="G$1" pin="D1" pad="20"/>
+<connect gate="G$1" pin="D2" pad="21"/>
+<connect gate="G$1" pin="D3" pad="22"/>
+<connect gate="G$1" pin="D4" pad="50"/>
+<connect gate="G$1" pin="D5" pad="51"/>
+<connect gate="G$1" pin="D6" pad="52"/>
+<connect gate="G$1" pin="D7" pad="53"/>
+<connect gate="G$1" pin="GND" pad="5"/>
+<connect gate="G$1" pin="GND@1" pad="36"/>
+<connect gate="G$1" pin="VCC" pad="27"/>
+<connect gate="G$1" pin="VCC@1" pad="58"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="MEM2051-00-195-00-A_REVC">
+<packages>
+<package name="GCT_MEM2051-00-195-00-A_REVC">
+<wire x1="-7" y1="-7.8" x2="7" y2="-7.8" width="0.1" layer="51"/>
+<wire x1="-7" y1="-7.8" x2="-7" y2="7.6" width="0.1" layer="51"/>
+<wire x1="7" y1="-7.8" x2="7" y2="7.6" width="0.1" layer="51"/>
+<wire x1="-7" y1="7.6" x2="7" y2="7.6" width="0.1" layer="51"/>
+<wire x1="0" y1="-0.5" x2="0" y2="0.5" width="0.1" layer="51"/>
+<wire x1="-0.5" y1="0" x2="0.5" y2="0" width="0.1" layer="51"/>
+<wire x1="-7" y1="7.6" x2="-6.02" y2="7.6" width="0.2" layer="21"/>
+<wire x1="-7" y1="-7.8" x2="5.39" y2="-7.8" width="0.2" layer="21"/>
+<wire x1="-2.69" y1="7.6" x2="-0.35" y2="7.6" width="0.2" layer="21"/>
+<wire x1="-7" y1="-4.48" x2="-7" y2="7.6" width="0.2" layer="21"/>
+<wire x1="7" y1="-5.46" x2="7" y2="7.6" width="0.2" layer="21"/>
+<wire x1="1.72" y1="7.6" x2="7" y2="7.6" width="0.2" layer="21"/>
+<text x="-7.50126875" y="8.360809375" size="2.032340625" layer="25" ratio="13" rot="SR0">&gt;NAME</text>
+<text x="-7.501940625" y="-10.4963" size="2.03251875" layer="27" ratio="13" rot="SR0">&gt;VALUE</text>
+<wire x1="-7.5" y1="8.25" x2="7.625" y2="8.25" width="0.05" layer="39"/>
+<wire x1="7.625" y1="8.25" x2="7.625" y2="-8.25" width="0.05" layer="39"/>
+<wire x1="7.625" y1="-8.25" x2="-7.5" y2="-8.25" width="0.05" layer="39"/>
+<wire x1="-7.5" y1="-8.25" x2="-7.5" y2="8.25" width="0.05" layer="39"/>
+<rectangle x1="-6.25816875" y1="1.371790625" x2="2.45" y2="3.67" layer="41"/>
+<circle x="3" y="-3.75" radius="0.1" width="0.2" layer="21"/>
+<smd name="1" x="1.94" y="-3.66" dx="0.8" dy="1.5" layer="1"/>
+<smd name="2" x="0.84" y="-3.26" dx="0.8" dy="1.5" layer="1"/>
+<smd name="3" x="-0.26" y="-3.66" dx="0.8" dy="1.5" layer="1"/>
+<smd name="4" x="-1.36" y="-3.86" dx="0.8" dy="1.5" layer="1"/>
+<smd name="5" x="-2.46" y="-3.66" dx="0.8" dy="1.5" layer="1"/>
+<smd name="6" x="-3.56" y="-3.86" dx="0.8" dy="1.5" layer="1"/>
+<smd name="7" x="-4.66" y="-3.66" dx="0.8" dy="1.5" layer="1"/>
+<smd name="8" x="-5.76" y="-3.66" dx="0.8" dy="1.5" layer="1"/>
+<smd name="9" x="-3.56" y="7.425" dx="1" dy="0.95" layer="1"/>
+<smd name="10" x="-4.95" y="7.2" dx="1.3" dy="1.4" layer="1"/>
+<smd name="11" x="0.75" y="7.2" dx="1.3" dy="1.4" layer="1"/>
+<smd name="12" x="-6.55" y="-5.95" dx="1.4" dy="1.9" layer="1"/>
+<smd name="13" x="6.6" y="-6.95" dx="1.4" dy="1.9" layer="1"/>
+</package>
+</packages>
+<symbols>
+<symbol name="MEM2051-00-195-00-A_REVC">
+<wire x1="0" y1="15.24" x2="15.24" y2="15.24" width="0.254" layer="94"/>
+<wire x1="15.24" y1="15.24" x2="15.24" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-15.24" x2="0" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="0" y1="-15.24" x2="0" y2="15.24" width="0.254" layer="94"/>
+<text x="0" y="15.2576" size="1.78005" layer="95">&gt;NAME</text>
+<text x="0" y="-17.7921" size="1.779209375" layer="96">&gt;VALUE</text>
+<pin name="DAT0" x="-5.08" y="10.16" length="middle"/>
+<pin name="DAT1" x="-5.08" y="7.62" length="middle"/>
+<pin name="DAT2" x="-5.08" y="5.08" length="middle"/>
+<pin name="CD/DAT3" x="-5.08" y="2.54" length="middle"/>
+<pin name="CMD" x="-5.08" y="0" length="middle"/>
+<pin name="CLK" x="-5.08" y="-2.54" length="middle" function="clk"/>
+<pin name="VDD" x="-5.08" y="12.7" length="middle" direction="pwr"/>
+<pin name="VSS" x="-5.08" y="-5.08" length="middle" direction="pwr"/>
+<pin name="SHIELD" x="-5.08" y="-12.7" length="middle" direction="pas"/>
+<pin name="CD" x="-5.08" y="-10.16" length="middle" direction="pas"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="MEM2051-00-195-00-A_REVC" prefix="J">
+<description>Micro SD Memory Card Connector, 1.88mm Profile SMT,Push Push, with normally closed switch &lt;a href="https://snapeda.com/parts/MEM2051-00-195-00-A/Global%20Connector%20Technology/view-part/?ref=eda"&gt;Check prices&lt;/a&gt;  &lt;a href="https://pricing.snapeda.com/parts/MEM2051-00-195-00-A/Global%20Connector%20Technology/view-part?ref=eda"&gt;Check prices&lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="MEM2051-00-195-00-A_REVC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="GCT_MEM2051-00-195-00-A_REVC">
+<connects>
+<connect gate="G$1" pin="CD" pad="9"/>
+<connect gate="G$1" pin="CD/DAT3" pad="2"/>
+<connect gate="G$1" pin="CLK" pad="5"/>
+<connect gate="G$1" pin="CMD" pad="3"/>
+<connect gate="G$1" pin="DAT0" pad="7"/>
+<connect gate="G$1" pin="DAT1" pad="8"/>
+<connect gate="G$1" pin="DAT2" pad="1"/>
+<connect gate="G$1" pin="SHIELD" pad="10 11 12 13"/>
+<connect gate="G$1" pin="VDD" pad="4"/>
+<connect gate="G$1" pin="VSS" pad="6"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="AVAILABILITY" value="Warning"/>
+<attribute name="DESCRIPTION" value=" 9 (8 + 1) Position Card Connector microSD Surface Mount, Right Angle Gold, 1.95mm profile, Normally open switch, Push push, Top mount "/>
+<attribute name="MF" value="Global Connector Technology"/>
+<attribute name="MP" value="MEM2051-00-195-00-A"/>
+<attribute name="PACKAGE" value="None"/>
+<attribute name="PRICE" value="None"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</libraries>
+<attributes>
+</attributes>
+<variantdefs>
+</variantdefs>
+<classes>
+<class number="0" name="default" width="0" drill="0">
+</class>
+</classes>
+<parts>
+<part name="U$1" library="snes_cart" deviceset="CART" device="-SEEED"/>
+<part name="J1" library="MEM2051-00-195-00-A_REVC" deviceset="MEM2051-00-195-00-A_REVC" device=""/>
+</parts>
+<sheets>
+<sheet>
+<plain>
+</plain>
+<instances>
+<instance part="U$1" gate="G$1" x="193.04" y="10.16" smashed="yes">
+<attribute name="VALUE" x="180.34" y="-22.86" size="1.778" layer="96"/>
+</instance>
+<instance part="J1" gate="G$1" x="129.54" y="63.5" smashed="yes" rot="R90">
+<attribute name="NAME" x="114.2824" y="63.5" size="1.78005" layer="95" rot="R90"/>
+<attribute name="VALUE" x="147.3321" y="63.5" size="1.779209375" layer="96" rot="R90"/>
+</instance>
+</instances>
+<busses>
+</busses>
+<nets>
+</nets>
+</sheet>
+</sheets>
+</schematic>
+</drawing>
+</eagle>
